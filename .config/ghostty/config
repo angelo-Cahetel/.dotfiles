@@ -1,0 +1,31 @@
+auto-update-channel = tip
+
+window-height = 57
+window-width = 182
+window-save-state = always
+
+quick-terminal-position = center
+keybind = global:cmd+backquote=toggle_quick_terminal
+
+# Definição de tema
+# theme = Catppuccin Mocha
+# theme = TokyoNight Moon
+theme = light:catppuccin Latte, dark:Catppuccin Macchiato
+
+background-opacity = 0.1
+background-blur = macos-glass-regular
+
+cursor-color = #ea76cb
+cursor-text = #1e66f5 
+
+adjust-cursor-height = 20
+adjust-cursor-thickness = 3 
+mouse-hide-while-typing = true
+font-family = JetBrainsMono Nerd Font
+
+macos-icon = official 
+macos-titlebar-style = tabs
+macos-titlebar-proxy-icon = visible
+macos-option-as-alt = right
+
+

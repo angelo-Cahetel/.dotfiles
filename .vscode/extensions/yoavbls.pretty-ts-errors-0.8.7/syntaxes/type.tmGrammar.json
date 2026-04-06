@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/RedCMD/TmLanguage-Syntax-Highlighter/main/vscode.tmLanguage.schema.json",
+  "name": "TypeScript Type",
+  "scopeName": "source.type",
+  "patterns": [
+    {
+      "include": "source.ts#type"
+    },
+    {
+      "include": "source.ts#directives"
+    },
+    {
+      "include": "source.ts#statements"
+    },
+    {
+      "include": "source.ts#shebang"
+    }
+  ]
+}

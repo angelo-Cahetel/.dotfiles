@@ -1,0 +1,47 @@
+{
+	"name": "just-black",
+	"displayName": "Just Black",
+	"description": "Dark Theme With Syntax Highlighter!",
+	"version": "3.1.1",
+	"publisher": "Nur",
+	"engines": {
+		"vscode": "^1.40.0"
+	},
+	"icon": "img/logo.png",
+	"categories": [
+		"Themes"
+	],
+	"keywords": [
+		"just black",
+		"dark",
+		"black",
+		"theme"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nurmohammed840/extension.vsix/tree/Just-Black"
+	},
+	"contributes": {
+		"themes": [
+			{
+				"label": "Just Black",
+				"uiTheme": "vs-dark",
+				"path": "./JustBlack.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "16634f7c-b101-4f9a-80ee-7689cc501673",
+		"publisherId": "c1fc978a-bf01-4548-a41d-b498dd733ba2",
+		"publisherDisplayName": "nur",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1722625981321,
+		"pinned": false,
+		"preRelease": false,
+		"source": "gallery",
+		"size": 243512
+	}
+}

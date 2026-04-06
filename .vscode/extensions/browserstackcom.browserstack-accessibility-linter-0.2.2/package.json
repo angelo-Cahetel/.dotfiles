@@ -1,0 +1,83 @@
+{
+	"name": "browserstack-accessibility-linter",
+	"displayName": "Accessibility DevTools",
+	"description": "Lint your web and app codebase for accessibility issues ",
+	"version": "0.2.2",
+	"homepage": "https://www.browserstack.com/accessibility-testing/accessibility-devtools?scroll_to=linter",
+	"publisher": "browserstackcom",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/browserstack/AccessibilityDevTools.git"
+	},
+	"categories": [
+		"Programming Languages",
+		"Linters",
+		"AI"
+	],
+	"keywords": [
+		"a11y",
+		"accessibility",
+		"linter",
+		"linting",
+		"testing",
+		"react"
+	],
+	"engines": {
+		"vscode": "^1.78.0"
+	},
+	"icon": "media/icon/logo.png",
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"chatParticipants": [
+			{
+				"id": "accessibility-devtools",
+				"name": "accessibility-devtools",
+				"fullName": "Accessibility DevTools",
+				"description": "Helps you generate accessibility linting configurations for your projects.",
+				"isSticky": true,
+				"commands": [
+					{
+						"name": "generate-config",
+						"description": "Generate accessibility linting config for your project"
+					}
+				]
+			}
+		],
+		"icons": {
+			"browserstack-icon": {
+				"description": "BrowserStack Icon",
+				"default": {
+					"fontPath": "media/font/bs-font.woff",
+					"fontCharacter": "\\E900"
+				}
+			}
+		},
+		"configuration": {
+			"title": "BrowserStack",
+			"properties": {
+				"browserstack.username": {
+					"type": "string",
+					"description": "Your BrowserStack username."
+				},
+				"browserstack.accessKey": {
+					"type": "string",
+					"description": "Your BrowserStack access key."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"package": "npx vsce package --allow-star-activation --allow-missing-repository --out vscode-extension-$(cat package.json | jq .version | awk -F '\"' '{print $2}').vsix --follow-symlinks"
+	},
+	"dependencies": {
+		"sql.js": "^1.13.0"
+	},
+	"__metadata": {
+		"installedTimestamp": 1774028614633,
+		"targetPlatform": "undefined",
+		"size": 19832022
+	}
+}

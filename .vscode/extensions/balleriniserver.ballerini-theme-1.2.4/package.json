@@ -1,0 +1,59 @@
+{
+	"name": "ballerini-theme",
+	"displayName": "Ballerini Theme",
+	"description": "Ballerini Theme Official. A dark theme for Visual Studio Code.",
+	"version": "1.2.4",
+	"publisher": "BalleriniServer",
+	"bugs": {
+		"url": "https://github.com/Ballerini-Server/Ballerini-theme/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Ballerini-Server/Ballerini-theme"
+	},
+	"keywords": [
+		"theme",
+		"dark",
+		"ballerini",
+		"balleriniserver",
+		"balleriniTheme",
+		"ballerini Theme",
+		"ballerini server",
+		"Code",
+		"autumn"
+	],
+	"icon": "icon.png",
+	"galleryBanner": {
+		"color": "#261c1e",
+		"theme": "dark"
+	},
+	"engines": {
+		"vscode": "^1.59.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Ballerini Theme",
+				"uiTheme": "vs-dark",
+				"path": "./themes/ballerini-theme.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "0b5c3a74-ba5b-4078-b56b-d77714e872e6",
+		"publisherId": "e5955be1-9fb2-4215-9d14-215106446337",
+		"publisherDisplayName": "Ballerini Theme",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1722625991250,
+		"pinned": false,
+		"preRelease": false,
+		"source": "gallery",
+		"size": 748494
+	}
+}

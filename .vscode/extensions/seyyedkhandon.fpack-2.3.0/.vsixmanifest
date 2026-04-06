@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+		<Metadata>
+			<Identity Language="en-US" Id="fpack" Version="2.3.0" Publisher="SeyyedKhandon" />
+			<DisplayName>Frontend Essentials Extension Pack (FPack)</DisplayName>
+			<Description xml:space="preserve">Frontend Development Essentials Extension Pack for Visual Studio Code</Description>
+			<Tags>web,developer experience,Frontend Development Essentials,extension pack,HTMLHint,HTML CSS Support,Auto Rename Tag,Color Highlight,Color Info,Unused CSS Classes for JavaScript/Angular/React,CSS Navigation,Image preview,Live Server,Static server,Five Server,Font Preview,Svg Preview,Prettier code formatter,Pretty TypeScript Errors</Tags>
+			<Categories>Extension Packs,Formatters,Other</Categories>
+			<GalleryFlags>Public</GalleryFlags>
+			
+			<Properties>
+				<Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.55.0" />
+				<Property Id="Microsoft.VisualStudio.Code.ExtensionDependencies" Value="" />
+				<Property Id="Microsoft.VisualStudio.Code.ExtensionPack" Value="HTMLHint.vscode-htmlhint,ecmel.vscode-html-css,formulahendry.auto-rename-tag,naumovs.color-highlight,bierner.color-info,rcore.rcore-unused-css-classes,pucelle.vscode-css-navigation,kisstkondoros.vscode-gutter-preview,yandeu.five-server,SimonSiefke.svg-preview,ctcuff.font-preview,esbenp.prettier-vscode,yoavbls.pretty-ts-errors" />
+				<Property Id="Microsoft.VisualStudio.Code.ExtensionKind" Value="workspace" />
+				<Property Id="Microsoft.VisualStudio.Code.LocalizedLanguages" Value="" />
+				
+				
+				<Property Id="Microsoft.VisualStudio.Services.Links.Source" Value="https://github.com/SeyyedKhandon/fpack.git" />
+				<Property Id="Microsoft.VisualStudio.Services.Links.Getstarted" Value="https://github.com/SeyyedKhandon/fpack.git" />
+				<Property Id="Microsoft.VisualStudio.Services.Links.GitHub" Value="https://github.com/SeyyedKhandon/fpack.git" />
+				<Property Id="Microsoft.VisualStudio.Services.Links.Support" Value="https://github.com/SeyyedKhandon/fpack.git/issues" />
+				<Property Id="Microsoft.VisualStudio.Services.Links.Learn" Value="https://github.com/SeyyedKhandon/fpack.git" />
+				<Property Id="Microsoft.VisualStudio.Services.Branding.Color" Value="#47B784" />
+				<Property Id="Microsoft.VisualStudio.Services.Branding.Theme" Value="dark" />
+				<Property Id="Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown" Value="true" />
+				<Property Id="Microsoft.VisualStudio.Services.Content.Pricing" Value="Free"/>
+
+				
+				
+			</Properties>
+			<License>extension/LICENSE.txt</License>
+			<Icon>extension/assets/fpack.jpg</Icon>
+		</Metadata>
+		<Installation>
+			<InstallationTarget Id="Microsoft.VisualStudio.Code"/>
+		</Installation>
+		<Dependencies/>
+		<Assets>
+			<Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json" Addressable="true" />
+			<Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="extension/README.md" Addressable="true" />
+<Asset Type="Microsoft.VisualStudio.Services.Content.Changelog" Path="extension/CHANGELOG.md" Addressable="true" />
+<Asset Type="Microsoft.VisualStudio.Services.Content.License" Path="extension/LICENSE.txt" Addressable="true" />
+<Asset Type="Microsoft.VisualStudio.Services.Icons.Default" Path="extension/assets/fpack.jpg" Addressable="true" />
+		</Assets>
+	</PackageManifest>

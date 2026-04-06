@@ -1,0 +1,67 @@
+{
+	"name": "aura-spirit-dracula",
+	"displayName": "Aura Spirit Dracula Theme",
+	"description": "A beautiful dark theme for Visual Studio Code",
+	"version": "0.1.10",
+	"scripts": {
+		"publish": "vsce publish"
+	},
+	"publisher": "JoseMurilloc",
+	"author": {
+		"name": "José Murillo",
+		"email": "jooseemurillo@gmail.com",
+		"url": "https://JoseMurilloc.github.io"
+	},
+	"icon": "logo.png",
+	"galleryBanner": {
+		"color": "#140e1a",
+		"theme": "dark"
+	},
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.47.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"keywords": [
+		"theme",
+		"dark",
+		"aura-spirit-dracula",
+		"aura",
+		"dracula",
+		"spirit",
+		"color-theme"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Aura Dracula Spirit",
+				"uiTheme": "vs-dark",
+				"path": "./themes/aura-dracula-spirit-theme.json"
+			},
+			{
+				"label": "Aura Dracula Spirit (Soft)",
+				"uiTheme": "vs-dark",
+				"path": "./themes/aura-dracula-spirit-soft-theme.json"
+			},
+			{
+				"label": "Aura Dracula Spirit (Synthwave)",
+				"uiTheme": "vs-dark",
+				"path": "./themes/aura-dracula-spirit-synthwave-theme.json"
+			}
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/josemurilloc/aura-spirit-dracula.git"
+	},
+	"bugs": {
+		"url": "https://github.com/josemurilloc/aura-spirit-dracula/issues"
+	},
+	"__metadata": {
+		"installedTimestamp": 1764180686332,
+		"targetPlatform": "undefined",
+		"size": 2200839
+	}
+}

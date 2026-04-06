@@ -1,0 +1,152 @@
+{
+	"name": "font-preview",
+	"displayName": "Font Preview",
+	"description": "Preview fonts in VS Code",
+	"license": "MIT",
+	"version": "2.2.1",
+	"publisher": "ctcuff",
+	"icon": "icon.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ctcuff/vscode-font-preview/"
+	},
+	"galleryBanner": {
+		"color": "#041A2F",
+		"theme": "dark"
+	},
+	"keywords": [
+		"font",
+		"viewer",
+		"font preview",
+		"font viewer"
+	],
+	"engines": {
+		"vscode": "^1.56.0"
+	},
+	"vsce": {
+		"yarn": true
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"activationEvents": [
+		"onCustomEditor:font.detail.preview"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"customEditors": [
+			{
+				"viewType": "font.detail.preview",
+				"displayName": "Font Preview",
+				"priority": "default",
+				"selector": [
+					{
+						"filenamePattern": "*.{ttf,ttc,otf,woff,woff2}"
+					}
+				]
+			}
+		],
+		"configuration": {
+			"title": "Font Preview",
+			"properties": {
+				"font-preview.defaultTab": {
+					"description": "Controls the starting tab of the preview.",
+					"type": "string",
+					"enum": [
+						"Preview",
+						"Features",
+						"Glyphs",
+						"Waterfall",
+						"Type Yourself",
+						"License"
+					],
+					"default": "Preview",
+					"enumDescriptions": [
+						"The preview will always start on the \"Preview\" tab.",
+						"The preview will always start on the \"Features\" tab (if present).",
+						"The preview will always start on the \"Glyphs\" tab (if present).",
+						"The preview will always start on the \"Waterfall\" tab.",
+						"The preview will always start on the \"Type Yourself\" tab.",
+						"The preview will always start on the \"License\" tab (if present)."
+					]
+				},
+				"font-preview.useWorker": {
+					"description": "If enabled, VS Code will try to use a worker when loading the font. Fonts may load faster, but you may also see a small shift while the font loads. Disable this setting if you notice any weird behavior.",
+					"type": "boolean",
+					"default": false
+				},
+				"font-preview.showGlyphWidth": {
+					"description": "Show the glyph's width in the cell.",
+					"type": "boolean",
+					"default": true
+				},
+				"font-preview.showGlyphIndex": {
+					"description": "Show the index of the glyph in the left corner of the cell.",
+					"type": "boolean",
+					"default": true
+				}
+			}
+		}
+	},
+	"scripts": {
+		"build": "(rm -rf ./dist || true) && npm-run-all -p build:*",
+		"build:extension": "webpack --mode production --devtool eval",
+		"build:web": "cd ./web && yarn build",
+		"format": "prettier --write './shared/**/*{.js,.ts}' './src/**/*{.js,.ts}' './web/**/*{.js,.jsx,.ts,.tsx,.scss}'",
+		"lint": "yarn lint:web && yarn lint:extension",
+		"lint:web": "cd ./web && yarn lint",
+		"lint:extension": "eslint './src/**/*{.js,.ts}'",
+		"package": "vsce package --no-update-package-json",
+		"postinstall": "cd web && yarn",
+		"precommit": "lint-staged",
+		"prepare": "husky install",
+		"pretest": "yarn run test-compile && yarn run lint",
+		"test": "node ./out/test/runTest.js",
+		"test:compile": "tsc -p ./",
+		"test:watch": "tsc -watch -p ./",
+		"vscode:prepublish": "yarn run build",
+		"watch": "npm-run-all -p watch:*",
+		"watch:extension": "webpack --watch --mode development",
+		"watch:web": "cd ./web && yarn watch"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.56.0",
+		"@types/vscode-webview": "^1.57.0",
+		"@types/wawoff2": "^1.0.0",
+		"@typescript-eslint/eslint-plugin": "^4.14.1",
+		"@typescript-eslint/parser": "^4.14.1",
+		"eslint": "^7.19.0",
+		"glob": "^7.1.6",
+		"html-loader": "^2.1.2",
+		"husky": "^6.0.0",
+		"lint-staged": "^11.0.0",
+		"mocha": "^10.0.0",
+		"npm-run-all": "^4.1.5",
+		"prettier": "^2.3.0",
+		"ts-loader": "^9.3.1",
+		"typescript": "^4.1.3",
+		"vscode-test": "^1.6.1",
+		"webpack": "^5.19.0",
+		"webpack-cli": "^4.7.0"
+	},
+	"dependencies": {
+		"wawoff2": "^2.0.1"
+	},
+	"__metadata": {
+		"id": "89d4a1d0-a567-4ed7-9f81-a03ab672d713",
+		"publisherId": "6a8705fc-307d-4d8a-afcf-b20b5b4e2276",
+		"publisherDisplayName": "ctcuff",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1722625991250,
+		"pinned": false,
+		"preRelease": false,
+		"source": "gallery",
+		"size": 2598592
+	}
+}
