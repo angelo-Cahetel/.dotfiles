@@ -2,7 +2,7 @@ auto-update-channel = tip
 
 window-height = 57
 window-width = 182
-window-save-state = always
+window-save-state = never
 
 quick-terminal-position = center
 keybind = global:cmd+backquote=toggle_quick_terminal
