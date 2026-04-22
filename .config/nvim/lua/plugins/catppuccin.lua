@@ -18,7 +18,7 @@ local function apply_theme()
     vim.cmd.colorscheme("catppuccin-macchiato")
   else
     vim.o.background = "light"
-    vim.cmd.coloscheme("catppuccin-latte")
+    vim.cmd.colorscheme("catppuccin-latte")
   end
 end
 
@@ -26,7 +26,7 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
-    priority = 1000,
+    priority = 10000,
     opts = {
       flavour = "macchiato",
     },
@@ -34,10 +34,6 @@ return {
       require("catppuccin").setup(opts)
 
       apply_theme()
-
-      vim.api.nvim_create_autocmd({ "VimEnter", "FocusGained" }, {
-        callback = apply_theme,
-      })
     end,
   },
 }
