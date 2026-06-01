@@ -9,6 +9,7 @@ alias ls='eza --color=always --long --git --no-filesize --icons=always --no-time
 
 alias reload-zsh="source ~/.zshrc"
 alias edit-zsh="nvim ~/.zshrc"
+alias sudo-hamashi="sudo launchctl load /Library/LaunchDaemons/com.logmein.hamachi.plist"
 
 alias python="python3"
 
