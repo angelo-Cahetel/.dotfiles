@@ -30,3 +30,6 @@ macos-titlebar-proxy-icon = visible
 macos-option-as-alt = right
 
 
+
+# gtab managed include
+config-file = "/Users/angelomendes/.config/gtab/ghostty-shortcut.conf"
