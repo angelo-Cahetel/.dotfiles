@@ -13,8 +13,8 @@ keybind = global:cmd+shift+backquote=toggle_quick_terminal
 # theme = TokyoNight Moon
 theme = light:catppuccin Latte, dark:Catppuccin Macchiato
 
-background-opacity = 0.1
-background-blur = macos-glass-regular
+# background-opacity = 0.1
+# background-blur = macos-glass-regular
 
 cursor-color = #ea76cb
 cursor-text = #1e66f5 
