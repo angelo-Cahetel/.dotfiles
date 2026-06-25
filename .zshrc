@@ -3,6 +3,9 @@ eval "$(starship init zsh)"
 
 source <(fzf --zsh)
 
+# Alias para reiniciar o fastfetch quando limpa o terminal
+alias cls='clear && fastfetch'
+
 alias inv='nvim $(fzf -m --style full --preview="bat --color=always {}")'
 
 alias ls='eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions'
