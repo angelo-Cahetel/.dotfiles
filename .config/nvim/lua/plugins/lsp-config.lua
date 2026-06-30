@@ -30,11 +30,15 @@ return {
     vim.lsp.config("jdtls", {
       capabilities = capabilities,
     })
+    vim.lsp.config("gopls", {
+      capabilities = capabilities,
+    })
 
     vim.lsp.enable("ts_ls")
     vim.lsp.enable("html")
     vim.lsp.enable("lua_ls")
     vim.lsp.enable("jdtls")
+    vim.lsp.enable("gopls")
 
     vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
     vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
