@@ -40,3 +40,14 @@ opt.splitright = true
 opt.splitbelow = true
 
 opt.swapfile = false
+
+vim.opt.colorcolumn = "0"
+vim.opt.signcolumn = "yes"
+vim.o.cmdheight = 0
+
+vim.api.nvim_create_autocmd("TextYankPost", {
+  desc = "Highlight when yanking (copy) text",
+  callback = function()
+    vim.hl.on_yank()
+  end,
+})
