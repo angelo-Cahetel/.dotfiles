@@ -11,11 +11,15 @@ vim.opt.conceallevel = 0
 vim.opt.concealcursor = ""
 vim.g.mapleader = " "
 
+vim.cmd("filetype plugin indent on")
+
 -- tabs & indetation
 opt.tabstop = 2
+opt.softtabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
+opt.smartindent = true
 
 opt.wrap = true
 opt.linebreak = true

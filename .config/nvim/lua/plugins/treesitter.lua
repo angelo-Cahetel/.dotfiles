@@ -7,7 +7,15 @@ return {
     config.setup({
       auto_install = true,
       highlight = { enable = true },
-      indent = { enable = true },
+      indent = {
+        enable = true,
+        disable = {
+          "javascript",
+          "javascriptreact",
+          "typescript",
+          "typescriptreact",
+        },
+      },
       autotag = { enable = true },
       ensure_installed = {
         "json",
