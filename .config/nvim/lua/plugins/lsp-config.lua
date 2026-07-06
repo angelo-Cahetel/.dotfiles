@@ -13,6 +13,11 @@ return {
     end
 
     local capabilities = vim.lsp.protocol.make_client_capabilities()
+    local ok_cmp, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+    if ok_cmp then
+      capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
+    end
+
     local ok_blink, blink = pcall(require, "blink.cmp")
     if ok_blink then
       capabilities = blink.get_lsp_capabilities(capabilities)
@@ -23,6 +28,17 @@ return {
     })
     vim.lsp.config("html", {
       capabilities = capabilities,
+    })
+    vim.lsp.config("emmet_ls", {
+      capabilities = capabilities,
+      filetypes = {
+        "html",
+        "css",
+        "scss",
+        "javascriptreact",
+        "typescriptreact",
+        "svelte",
+      },
     })
     vim.lsp.config("lua_ls", {
       capabilities = capabilities,
@@ -36,6 +52,7 @@ return {
 
     vim.lsp.enable("ts_ls")
     vim.lsp.enable("html")
+    vim.lsp.enable("emmet_ls")
     vim.lsp.enable("lua_ls")
     vim.lsp.enable("jdtls")
     vim.lsp.enable("gopls")
