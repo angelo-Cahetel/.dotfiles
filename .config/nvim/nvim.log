@@ -4,3 +4,4 @@ WRN 2026-04-24T02:54:23.176 ?.19289    server_start:197: Failed to start server:
 WRN 2026-06-29T04:20:01.332 ?.69678    server_start:197: Failed to start server: operation not permitted: /var/folders/ld/bx7tc4_j02v713f81rp4b51r0000gn/T/nvim.angelomendes/xZRaGn/nvim.69678.0
 WRN 2026-06-29T04:20:30.053 ?.69715    server_start:197: Failed to start server: operation not permitted: /var/folders/ld/bx7tc4_j02v713f81rp4b51r0000gn/T/nvim.angelomendes/CJezQW/nvim.69715.0
 WRN 2026-06-29T12:21:55.995 ?.27309    server_start:197: Failed to start server: operation not permitted: /var/folders/ld/bx7tc4_j02v713f81rp4b51r0000gn/T/nvim.angelomendes/IEgB3l/nvim.27309.0
+WRN 2026-07-07T14:17:00.830 ?.71291    server_start:197: Failed to start server: operation not permitted: /var/folders/ld/bx7tc4_j02v713f81rp4b51r0000gn/T/nvim.angelomendes/MHVNRe/nvim.71291.0
