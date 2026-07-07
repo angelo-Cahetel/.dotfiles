@@ -1,11 +1,11 @@
 return {
-	"stevearc/dressing.nvim",
-	lazy = false,
-	config = function()
-		require("dressing").setup({
-			input = {
-				enabled = true,
-			},
-		})
-	end,
+  "stevearc/dressing.nvim",
+  lazy = false,
+  config = function()
+    require("dressing").setup({
+      input = {
+        enabled = false,
+      },
+    })
+  end,
 }

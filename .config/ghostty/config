@@ -16,10 +16,10 @@ theme = light:catppuccin Latte, dark:Catppuccin Macchiato
 # background-opacity = 0.1
 # background-blur = macos-glass-regular
 
-cursor-color = #ea76cb
+# cursor-color = #ea76cb
 cursor-text = #1e66f5 
 
-adjust-cursor-height = 20
+# adjust-cursor-height = 20
 adjust-cursor-thickness = 3 
 mouse-hide-while-typing = true
 font-family = JetBrainsMono Nerd Font
