@@ -18,6 +18,30 @@ return {
       capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
     end
 
+    local cmp = require("cmp")
+
+    -- cmdline setup
+    cmp.setup.cmdline("/", {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = {
+        { name = "buffer" },
+      },
+    })
+
+    cmp.setup.cmdline(":", {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = cmp.config.sources({
+        { name = "path" },
+      }, {
+        {
+          name = "cmdline",
+          option = {
+            ignore_cmds = { "Man", "!" },
+          },
+        },
+      }),
+    })
+
     local ok_blink, blink = pcall(require, "blink.cmp")
     if ok_blink then
       capabilities = blink.get_lsp_capabilities(capabilities)
