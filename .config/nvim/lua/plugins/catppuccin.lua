@@ -63,13 +63,16 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 10000,
-    opts = {
-      flavour = "macchiato",
-    },
-    config = function(_, opts)
-      require("catppuccin").setup(opts)
-
+    config = function()
       apply_theme()
     end,
   },
+  -- {
+  --   "rose-pine/neovim",
+  --   name = "rose-pine",
+  --   priority = 10000,
+  --   config = function()
+  --     apply_theme()
+  --   end,
+  -- },
 }

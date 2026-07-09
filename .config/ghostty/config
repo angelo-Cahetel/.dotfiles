@@ -1,17 +1,19 @@
 auto-update-channel = tip
 
-window-height = 57
-window-width = 182
+window-height = 51
+window-width = 183
 window-save-state = never
 
 quick-terminal-position = center
-quick-terminal-size = 75%, 500px
-keybind = global:cmd+shift+backquote=toggle_quick_terminal
+quick-terminal-size = 75%, 75%
+keybind = global:cmd+shift+O=toggle_quick_terminal
 
 # Definição de tema
 # theme = Catppuccin Mocha
 # theme = TokyoNight Moon
+# theme = Rose Pine Moon
 theme = light:catppuccin Latte, dark:Catppuccin Macchiato
+# theme = light:Catppuccin Latte, dark:Rose Pine Moon
 
 # background-opacity = 0.1
 # background-blur = macos-glass-regular
@@ -33,3 +35,5 @@ macos-option-as-alt = right
 
 # gtab managed include
 config-file = "/Users/angelomendes/.config/gtab/ghostty-shortcut.conf"
+
+config-file = ?auto/shader.ghostty
