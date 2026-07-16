@@ -18,7 +18,13 @@ return {
     local config = require("nvim-treesitter.configs")
     config.setup({
       auto_install = true,
-      highlight = { enable = true },
+      highlight = {
+        enable = true,
+        disable = {
+          "markdown",
+          "markdown_inline",
+        },
+      },
       indent = {
         enable = true,
         disable = {
@@ -63,5 +69,34 @@ return {
         },
       },
     })
+
+    local query = require("vim.treesitter.query")
+    query.add_directive("set-lang-from-info-string!", function(match, _, bufnr, pred, metadata)
+      local capture_id = pred[2]
+      local node = match[capture_id]
+      if type(node) == "table" then
+        node = node[1]
+      end
+      if not node then
+        return
+      end
+
+      local ok, text = pcall(vim.treesitter.get_node_text, node, bufnr)
+      if not ok or not text or text == "" then
+        return
+      end
+
+      local injection_alias = text:lower()
+      local aliases = {
+        ex = "elixir",
+        pl = "perl",
+        sh = "bash",
+        ts = "typescript",
+        uxn = "uxntal",
+      }
+      metadata["injection.language"] = vim.filetype.match({ filename = "a." .. injection_alias })
+        or aliases[injection_alias]
+        or injection_alias
+    end, { force = true, all = false })
   end,
 }
