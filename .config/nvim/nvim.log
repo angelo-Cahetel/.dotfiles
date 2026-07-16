@@ -5,3 +5,16 @@ WRN 2026-06-29T04:20:01.332 ?.69678    server_start:197: Failed to start server:
 WRN 2026-06-29T04:20:30.053 ?.69715    server_start:197: Failed to start server: operation not permitted: /var/folders/ld/bx7tc4_j02v713f81rp4b51r0000gn/T/nvim.angelomendes/CJezQW/nvim.69715.0
 WRN 2026-06-29T12:21:55.995 ?.27309    server_start:197: Failed to start server: operation not permitted: /var/folders/ld/bx7tc4_j02v713f81rp4b51r0000gn/T/nvim.angelomendes/IEgB3l/nvim.27309.0
 WRN 2026-07-07T14:17:00.830 ?.71291    server_start:197: Failed to start server: operation not permitted: /var/folders/ld/bx7tc4_j02v713f81rp4b51r0000gn/T/nvim.angelomendes/MHVNRe/nvim.71291.0
+WRN 2026-07-09T14:18:24.088 ?.60011    server_start:197: Failed to start server: operation not permitted: /var/folders/ld/bx7tc4_j02v713f81rp4b51r0000gn/T/nvim.angelomendes/dYlkZ7/nvim.60011.0
+WRN 2026-07-09T14:18:46.108 ?.60050    server_start:197: Failed to start server: operation not permitted: /var/folders/ld/bx7tc4_j02v713f81rp4b51r0000gn/T/nvim.angelomendes/uimAl2/nvim.60050.0
+ERR 2026-07-09T14:18:46.407 ?.60050    decor_provider_error:29: Error in decoration provider "start" (ns=nvim.treesitter.highlighter):
+Lua: ...3/share/nvim/runtime/lua/vim/treesitter/languagetree.lua:215: .../neovim/0.12.3/share/nvim/runtime/lua/vim/treesitter.lua:197: attempt to call method 'range' (a nil value)
+stack traceback:
+	[C]: in function 'f'
+	...3/share/nvim/runtime/lua/vim/treesitter/languagetree.lua:215: in function 'tcall'
+	...3/share/nvim/runtime/lua/vim/treesitter/languagetree.lua:596: in function 'parse'
+	....3/share/nvim/runtime/lua/vim/treesitter/highlighter.lua:580: in function <....3/share/nvim/runtime/lua/vim/treesitter/highlighter.lua:557>
+WRN 2026-07-09T14:34:00.066 ?.65582    server_start:197: Failed to start server: operation not permitted: /var/folders/ld/bx7tc4_j02v713f81rp4b51r0000gn/T/nvim.angelomendes/s37mRk/nvim.65582.0
+WRN 2026-07-09T15:19:55.911 ?.87338    server_start:197: Failed to start server: operation not permitted: /var/folders/ld/bx7tc4_j02v713f81rp4b51r0000gn/T/nvim.angelomendes/H4rnub/nvim.87338.0
+WRN 2026-07-09T15:39:47.981 ?.99355    server_start:197: Failed to start server: operation not permitted: /var/folders/ld/bx7tc4_j02v713f81rp4b51r0000gn/T/nvim.angelomendes/jlC91m/nvim.99355.0
+WRN 2026-07-16T02:39:28.766 ?.9335     server_start:197: Failed to start server: operation not permitted: /var/folders/ld/bx7tc4_j02v713f81rp4b51r0000gn/T/nvim.angelomendes/NUSlw0/nvim.9335.0

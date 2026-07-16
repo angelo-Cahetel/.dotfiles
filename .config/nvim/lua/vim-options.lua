@@ -13,6 +13,8 @@ vim.g.mapleader = " "
 
 vim.cmd("filetype plugin indent on")
 
+vim.o.winborder = "rounded"
+
 -- tabs & indetation
 opt.tabstop = 2
 opt.softtabstop = 2
