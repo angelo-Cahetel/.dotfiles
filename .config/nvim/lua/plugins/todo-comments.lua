@@ -2,6 +2,21 @@ return {
 	"folke/todo-comments.nvim",
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = { "nvim-lua/plenary.nvim" },
+	keys = {
+		{
+			"<leader>ft",
+			function()
+				local ok, todo_snacks = pcall(require, "todo-comments.snacks")
+				if ok then
+					require("snacks.picker.config.sources").todo = todo_snacks.source
+					return todo_snacks.pick()
+				end
+
+				vim.cmd("TodoTelescope")
+			end,
+			desc = "Find todos",
+		},
+	},
 	config = function()
 		local todo_comments = require("todo-comments")
 

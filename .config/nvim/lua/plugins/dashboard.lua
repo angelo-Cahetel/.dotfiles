@@ -17,11 +17,11 @@ return {
     dashboard.section.header.val = vim.split(logo, "\n")
     -- stylua: ignore
     dashboard.section.buttons.val = {
-      dashboard.button("f", " " .. " Find file",       "<cmd> Telescope find_files <cr>"),
+      dashboard.button("f", " " .. " Find file",       [[<cmd> lua Snacks.picker.files() <cr>]]),
       dashboard.button("n", " " .. " New file",        [[<cmd> ene <BAR> startinsert <cr>]]),
-      dashboard.button("r", " " .. " Recent files",    [[<cmd> Telescope oldfiles <cr>]]),
-      dashboard.button("g", " " .. " Find text",       [[<cmd> Telescope live_grep <cr>]]),
-      dashboard.button("c", " " .. " Config",          "<cmd> Telescope find_files cwd=" .. vim.fn.stdpath("config") .. " <cr>"),
+      dashboard.button("r", " " .. " Recent files",    [[<cmd> lua Snacks.picker.recent() <cr>]]),
+      dashboard.button("g", " " .. " Find text",       [[<cmd> lua Snacks.picker.grep() <cr>]]),
+      dashboard.button("c", " " .. " Config",          "<cmd> lua Snacks.picker.files({ cwd = " .. vim.inspect(vim.fn.stdpath("config")) .. " }) <cr>"),
       dashboard.button("l", "󰒲 " .. " Lazy",            "<cmd> Lazy <cr>"),
       dashboard.button("q", " " .. " Quit",            "<cmd> qa <cr>"),
     }
