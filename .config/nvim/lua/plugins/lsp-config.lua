@@ -2,15 +2,6 @@ return {
   "neovim/nvim-lspconfig",
   lazy = false,
   config = function()
-    require("noice").setup({
-      lsp = {
-        override = {
-          ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-          ["vim.lsp.util.stylize_markdown"] = true,
-          ["cmp.entry.get_documentation"] = true,
-        },
-      },
-    })
     -- Ensure Neovim process exposes a Java 21+ runtime for jdtls.
     local java_home = vim.trim(vim.fn.system("/usr/libexec/java_home -v 21+ 2>/dev/null"))
     if vim.v.shell_error == 0 and java_home ~= "" then
@@ -59,43 +50,55 @@ return {
     capabilities.textDocument.hover = capabilities.textDocument.hover or {}
     capabilities.textDocument.hover.contentFormat = { "plaintext" }
 
-    vim.lsp.config("ts_ls", {
-      capabilities = capabilities,
-    })
-    vim.lsp.config("html", {
-      capabilities = capabilities,
-    })
-    vim.lsp.config("emmet_ls", {
-      capabilities = capabilities,
-      filetypes = {
-        "html",
-        "css",
-        "scss",
-        "javascriptreact",
-        "typescriptreact",
-        "svelte",
+    local servers = {
+      ts_ls = {},
+      html = {},
+      cssls = {},
+      tailwindcss = {
+        filetypes = {
+          "html",
+          "css",
+          "scss",
+          "javascript",
+          "javascriptreact",
+          "typescript",
+          "typescriptreact",
+          "svelte",
+        },
       },
-    })
-    vim.lsp.config("lua_ls", {
-      capabilities = capabilities,
-    })
-    vim.lsp.config("jdtls", {
-      capabilities = capabilities,
-    })
-    vim.lsp.config("gopls", {
-      capabilities = capabilities,
-    })
-    vim.lsp.config("markdown_oxide", {
-      capabilities = capabilities,
-    })
+      svelte = {},
+      graphql = {},
+      emmet_ls = {
+        filetypes = {
+          "html",
+          "css",
+          "scss",
+          "javascriptreact",
+          "typescriptreact",
+          "svelte",
+        },
+      },
+      lua_ls = {
+        settings = {
+          Lua = {
+            diagnostics = {
+              globals = { "vim" },
+            },
+          },
+        },
+      },
+      jdtls = {},
+      gopls = {},
+      pyright = {},
+      prismals = {},
+      markdown_oxide = {},
+    }
 
-    vim.lsp.enable("ts_ls")
-    vim.lsp.enable("html")
-    vim.lsp.enable("emmet_ls")
-    vim.lsp.enable("lua_ls")
-    vim.lsp.enable("jdtls")
-    vim.lsp.enable("gopls")
-    vim.lsp.enable("markdown_oxide")
+    for server, config in pairs(servers) do
+      config.capabilities = capabilities
+      vim.lsp.config(server, config)
+      vim.lsp.enable(server)
+    end
 
     vim.keymap.set("n", "K", function()
       vim.lsp.buf.hover({

@@ -23,12 +23,12 @@ return {
     mason_lspconfig.setup({
       ensure_installed = {
         "lua_ls",
-        "eslint",
         "ts_ls",
         "tailwindcss",
         "pyright",
-        "pylsp",
         "jdtls",
+        "gopls",
+        "markdown_oxide",
         -- "tsserver",
         "html",
         "cssls",
@@ -43,10 +43,14 @@ return {
       ensure_installed = {
         "prettier",
         "stylua",
+        "ruff",
         "isort",
         "black",
         "pylint",
         "eslint_d",
+        "goimports",
+        "gofumpt",
+        "golangci-lint",
       },
     })
 
