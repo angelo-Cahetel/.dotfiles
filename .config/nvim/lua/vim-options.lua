@@ -1,14 +1,10 @@
 local opt = vim.opt
 
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.termguicolors = true
-vim.opt.conceallevel = 0
-vim.opt.concealcursor = ""
+opt.number = true
+opt.relativenumber = true
+opt.termguicolors = true
+opt.conceallevel = 0
+opt.concealcursor = ""
 vim.g.mapleader = " "
 
 vim.cmd("filetype plugin indent on")
@@ -43,8 +39,8 @@ opt.splitbelow = true
 
 opt.swapfile = false
 
-vim.opt.colorcolumn = "0"
-vim.opt.signcolumn = "yes"
+opt.colorcolumn = "0"
+opt.signcolumn = "yes"
 vim.o.cmdheight = 0
 
 vim.api.nvim_create_autocmd("TextYankPost", {
