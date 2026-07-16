@@ -12,6 +12,7 @@ keybind = global:cmd+shift+O=toggle_quick_terminal
 # theme = Catppuccin Mocha
 # theme = TokyoNight Moon
 # theme = Rose Pine Moon
+# theme = Cyberpunk Scarlet Protocol
 theme = light:catppuccin Latte, dark:Catppuccin Macchiato
 # theme = light:Catppuccin Latte, dark:Rose Pine Moon
 
@@ -36,4 +37,5 @@ macos-option-as-alt = right
 # gtab managed include
 config-file = "/Users/angelomendes/.config/gtab/ghostty-shortcut.conf"
 
-config-file = ?auto/shader.ghostty
+# custom-shader = ghostty-shaders/in-game-crt.glsl
+# custom-shader = ghostty-shaders/tft.glsl
