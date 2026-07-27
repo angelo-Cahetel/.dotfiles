@@ -1,5 +1,4 @@
-
-eval "$(starship init zsh)"
+eval "$(oh-my-posh init zsh  --config "https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/catppuccin_macchiato.omp.json" )"
 
 source <(fzf --zsh)
 
