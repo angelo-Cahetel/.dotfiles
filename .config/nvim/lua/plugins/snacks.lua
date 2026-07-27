@@ -34,10 +34,22 @@ return {
     {
       "<C-b>",
       function()
-        Snacks.explorer.reveal()
+        local explorer = Snacks.picker.get({ source = "explorer" })[1]
+        if explorer then
+          explorer:focus("list")
+        else
+          Snacks.explorer()
+        end
       end,
-      desc = "Reveal current file",
+      desc = "Focus file explorer",
     },
+    -- {
+    --   "<C-b>",
+    --   function()
+    --     Snacks.explorer.reveal()
+    --   end,
+    --   desc = "Reveal current file",
+    -- },
     {
       "<leader>ff",
       function()
