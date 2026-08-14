@@ -43,13 +43,6 @@ return {
       end,
       desc = "Focus file explorer",
     },
-    -- {
-    --   "<C-b>",
-    --   function()
-    --     Snacks.explorer.reveal()
-    --   end,
-    --   desc = "Reveal current file",
-    -- },
     {
       "<leader>ff",
       function()
