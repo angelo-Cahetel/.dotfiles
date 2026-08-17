@@ -30,8 +30,5 @@ macos-titlebar-style = tabs
 macos-titlebar-proxy-icon = visible
 macos-option-as-alt = right
 
-# gtab managed include
-config-file = "/Users/angelomendes/.config/gtab/ghostty-shortcut.conf"
-
 # custom-shader = ghostty-shaders/in-game-crt.glsl
 # custom-shader = ghostty-shaders/tft.glsl
