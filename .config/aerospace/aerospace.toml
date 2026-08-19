@@ -74,12 +74,12 @@ key-mapping.preset = 'qwerty'
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
-gaps.inner.horizontal = 5
-gaps.inner.vertical =   5
-gaps.outer.left =       5
-gaps.outer.bottom =     5
-gaps.outer.top =        5
-gaps.outer.right =      5
+gaps.inner.horizontal = 10
+gaps.inner.vertical =   10
+gaps.outer.left =       10
+gaps.outer.bottom =     10
+gaps.outer.top =        10
+gaps.outer.right =      10
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -187,4 +187,16 @@ run = 'move-node-to-workspace G'
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'finder'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Legcord'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Hamachi'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.FaceTime'
 run = 'layout floating'
