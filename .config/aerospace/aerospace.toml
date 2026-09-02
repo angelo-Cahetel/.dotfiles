@@ -184,7 +184,6 @@ gaps.outer.right =      10
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
 run= [
-  'layout floating',
   'move-node-to-workspace G'
 ]
 
