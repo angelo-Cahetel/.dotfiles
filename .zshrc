@@ -1,5 +1,5 @@
 eval "$(oh-my-posh init zsh  --config "https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/catppuccin_macchiato.omp.json" )"
-
+eval "$(fnm env --use-on-cd --shell zsh)"
 source <(fzf --zsh)
 
 # Alias para reiniciar o fastfetch quando limpa o terminal
