@@ -37,8 +37,6 @@ opt.clipboard:append("unnamedplus")
 opt.splitright = true
 opt.splitbelow = true
 
-opt.swapfile = false
-
 opt.colorcolumn = "0"
 opt.signcolumn = "yes"
 vim.o.cmdheight = 0
